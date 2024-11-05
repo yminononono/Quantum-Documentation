@@ -23,4 +23,4 @@ theme:
 nav:
     - 'Introduction': index.md
     - 'Software':
-      - 'Qiskit-metal': qiskit-metal.md
+      - 'Qiskit-metal': Software/qiskit-metal.md
