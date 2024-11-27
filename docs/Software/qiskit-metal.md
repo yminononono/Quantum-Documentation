@@ -19,7 +19,9 @@ HFSS 上で給電部分の設定は Wave port と Lumped port の 2 つが使用
 
 ### シミュレーションの CPU Core の変更
 
-```Tools``` -> ```Edit Active Analysis Configuration``` から使用するコア数を変更することができる。([image](<Screenshot 2024-11-21 at 17.12.16.png>){ width="50%" })
+```Tools``` -> ```Edit Active Analysis Configuration``` から使用するコア数を変更することができる。
+
+![image](<Screenshot 2024-11-21 at 17.12.16.png>){ width="50%" }
 
 ### 電磁場解析
 
@@ -98,50 +100,29 @@ Ansys で render したオブジェクトにカーソルを合わせるとその
 1. まずは新規プロジェクトの作成 (```File``` -> ```New```)
 2. HFSS design の作成 (```Project``` -> ```Insert HFSS design```)
 3. HFSS design の Solution type の設定
-    - S-parameter の測定などを行いたい場合には、HFSS design を右クリックして ```Solution Type``` を選択
-        - ![](<Screenshot 2024-11-25 at 14.43.43.png>){ width="50%" }
-    - ```HFSS with Hybrid and Arrays```, ```Network Analysis```, ```Modal``` を選択する。
-        - ![](<Screenshot 2024-11-25 at 14.44.01.png>){ width="50%" }
-4. GDS design の import (```Modeler``` -> ```Import```)
-    - ![](<Screenshot 2024-11-25 at 17.12.47.png>){ width="50%" }
-    - ![](<Screenshot 2024-11-25 at 17.13.35.png>){ width="50%" }
+    - S-parameter の測定などを行いたい場合には、HFSS design を右クリックして ```Solution Type``` を選択 ([image](<Screenshot 2024-11-25 at 14.43.43.png>){ width="50%" })
+    - ```HFSS with Hybrid and Arrays```, ```Network Analysis```, ```Modal``` を選択する。 ([image](<Screenshot 2024-11-25 at 14.44.01.png>){ width="50%" })
+4. GDS design の import (```Modeler``` -> ```Import```) ([image](<Screenshot 2024-11-25 at 17.12.47.png>){ width="50%" } -> [image](<Screenshot 2024-11-25 at 17.13.35.png>){ width="50%" })
 5. Boundary の設定
-    - Ground や feedline, resonator など金属が蒸着されている部分を選択し、右クリックで ```Assign Boundary``` -> ```Perfect E``` を設定する。
-    - ![](<Screenshot 2024-11-25 at 17.18.03.png>){ width="50%" }
+    - Ground や feedline, resonator など金属が蒸着されている部分を選択し、右クリックで ```Assign Boundary``` -> ```Perfect E``` を設定する。 ([image](<Screenshot 2024-11-25 at 17.18.03.png>){ width="50%" })
 6. シリコン基盤と vacuum の作成
     - Model の中に solid を定義する
     - ```Draw``` -> ```Box``` で box を定義する。
-    - シリコン基盤の場合は、デザインの下に密着するように配置し、```Properties``` から silicon を選択する。
-        - ![](<Screenshot 2024-11-25 at 17.19.36.png>){ width="50%" }
-        - ![](<Screenshot 2024-11-25 at 17.19.08.png>){ width="50%" }
+    - シリコン基盤の場合は、デザインの下に密着するように配置し、```Properties``` から silicon を選択する。 ([image](<Screenshot 2024-11-25 at 17.19.36.png>){ width="50%" } -> [image](<Screenshot 2024-11-25 at 17.19.08.png>){ width="50%" })
     - vacuum の場合は、デザイン全体を覆うように選択する。
 7. Port の作成
-    - Launch pad の横に四角形の model を用意する。(```Draw``` -> ```Rectangle```)
-        - ![](<Screenshot 2024-11-25 at 17.26.27.png>){ width="50%" }
-    - 作成した model を選択し、Lumped port として指定する。(```Assign Excitation``` -> ```Port``` -> ```Lumped Port```)
-        - ![](<Screenshot 2024-11-25 at 17.31.09.png>){ width="50%" }
-    - ```Integration Line``` の指定が必要になるので、図から指定する。(図の赤い矢印)
-        - ![](<Screenshot 2024-11-25 at 17.31.25.png>){ width="50%" }
-        - ![](<Screenshot 2024-11-25 at 17.36.54.png>){ width="50%" }
+    - Launch pad の横に四角形の model を用意する。(```Draw``` -> ```Rectangle```) ([image](<Screenshot 2024-11-25 at 17.26.27.png>){ width="50%" })
+    - 作成した model を選択し、Lumped port として指定する。(```Assign Excitation``` -> ```Port``` -> ```Lumped Port```) ([image](<Screenshot 2024-11-25 at 17.31.09.png>){ width="50%" })
+    - ```Integration Line``` の指定が必要になるので、図から指定する。(図の赤い矢印) ([image](<Screenshot 2024-11-25 at 17.31.25.png>){ width="50%" } -> [image](<Screenshot 2024-11-25 at 17.36.54.png>){ width="50%" })
     - これで入力と出力となるポートを作成する
 8. Mesh の指定
-    - Mesh を細かく切りたいオブジェクトを選択し、```Assign Mesh Operation``` -> ```On Selection``` -> ```Length Based``` を選択
-        - ![](<Screenshot 2024-11-25 at 17.44.06.png>){ width="50%" }
-        - ![](<Screenshot 2024-11-25 at 17.44.19.png>){ width="50%" }
+    - Mesh を細かく切りたいオブジェクトを選択し、```Assign Mesh Operation``` -> ```On Selection``` -> ```Length Based``` を選択 ([image](<Screenshot 2024-11-25 at 17.44.06.png>){ width="50%" } -> [image](<Screenshot 2024-11-25 at 17.44.19.png>){ width="50%" })
 9.  Analysis の setup
-    - ```Analysis``` -> ```Add Solution Setup``` -> ```Advanced```
-        - ![](<Screenshot 2024-11-25 at 17.45.06.png>){ width="50%" }
-        - ![](<Screenshot 2024-11-25 at 17.45.40.png>){ width="50%" }
-        - ![](<Screenshot 2024-11-25 at 17.45.46.png>){ width="50%" }
-    - Frequency Sweep を追加する
-        - ![](<Screenshot 2024-11-25 at 17.46.29.png>){ width="50%" }
+    - ```Analysis``` -> ```Add Solution Setup``` -> ```Advanced``` ([image](<Screenshot 2024-11-25 at 17.45.06.png>){ width="50%" } -> [image](<Screenshot 2024-11-25 at 17.45.40.png>){ width="50%" } -> [image](<Screenshot 2024-11-25 at 17.45.46.png>){ width="50%" })
+    - Frequency Sweep を追加する ([image](<Screenshot 2024-11-25 at 17.46.29.png>){ width="50%" })
 10. Analysis を走らせる
-    - ```<Setup した Analysis>``` -> ```Analyze``` 
-    - ![](<Screenshot 2024-11-25 at 17.46.53.png>){ width="50%" }
+    - ```<Setup した Analysis>``` -> ```Analyze```  ([image](<Screenshot 2024-11-25 at 17.46.53.png>){ width="50%" })
 11. Results の確認
-    - ```Results``` -> ```Create Modal Solution Data Report``` -> ```Rectangular Plot```
-        - ![](<Screenshot 2024-11-25 at 17.56.38.png>){ width="50%" }
-    - Solution から解析したい setup を指定することを忘れずに
-        - ![](<Screenshot 2024-11-25 at 17.57.57.png>){ width="50%" }
-    - 図のような S-parameter の plot が表示される。
-        - ![](<Screenshot 2024-11-26 at 13.30.07.png>){ width="50%" }
+    - ```Results``` -> ```Create Modal Solution Data Report``` -> ```Rectangular Plot``` ([image](<Screenshot 2024-11-25 at 17.56.38.png>){ width="50%" })
+    - Solution から解析したい setup を指定することを忘れずに ([image](<Screenshot 2024-11-25 at 17.57.57.png>){ width="50%" })
+    - S-parameter の plot が表示される。([image](<Screenshot 2024-11-26 at 13.30.07.png>){ width="50%" })
