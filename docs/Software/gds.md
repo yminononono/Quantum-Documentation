@@ -3,14 +3,14 @@
 GDS の作成には gdstk, PHIDL, gdsfactory など様々なパッケージが存在する。  
 それぞれの違いとしては以下のテーブルにまとめている。
 
-| Feature              | gdsfactory      | gdspy         | gdstk         | PHIDL         | KLayout Scripting  |
-|----------------------|-----------------|---------------|---------------|---------------|--------------------|
-| **Abstraction Level** | High           | Medium        | Medium        | High          | High/GUI-based     |
-| **Speed**             | Medium         | Medium        | High          | Medium        | Low (scripted)     |
-| **Ease of Use**       | High           | Low           | Low           | High          | Medium             |
-| **Simulation Support**| Yes            | No            | No            | No            | No                 |
-| **Maintenance**       | Actively Maintained | Deprecated | Actively Maintained | Actively Maintained | Actively Maintained |
-| **Use Case Focus**    | Photonics      | General Layout| General Layout| General Layout| Interactive Design |
+|        Feature         |     gdsfactory      |     gdspy      |        gdstk        |        PHIDL        |  KLayout Scripting  |
+| ---------------------- | ------------------- | -------------- | ------------------- | ------------------- | ------------------- |
+| **Abstraction Level**  | High                | Medium         | Medium              | High                | High/GUI-based      |
+| **Speed**              | Medium              | Medium         | High                | Medium              | Low (scripted)      |
+| **Ease of Use**        | High                | Low            | Low                 | High                | Medium              |
+| **Simulation Support** | Yes                 | No             | No                  | No                  | No                  |
+| **Maintenance**        | Actively Maintained | Deprecated     | Actively Maintained | Actively Maintained | Actively Maintained |
+| **Use Case Focus**     | Photonics           | General Layout | General Layout      | General Layout      | Interactive Design  |
 
 それぞれのパッケージのインストールには Anaconda で conda 環境を用意すると非常に便利。
 

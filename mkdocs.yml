@@ -24,11 +24,25 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_alt
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
 
 plugins:
   - glightbox
 
 nav:
     - 'Introduction': index.md
+    - 'Hardware':
+      - 'Fabrication': Hardware/Fabrication.md  
     - 'Software':
+      - 'GDS': Software/gds.md    
       - 'Qiskit-metal': Software/qiskit-metal.md
