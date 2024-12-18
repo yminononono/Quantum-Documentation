@@ -14,6 +14,11 @@ GDS の作成には gdstk, PHIDL, gdsfactory など様々なパッケージが�
 
 それぞれのパッケージのインストールには Anaconda で conda 環境を用意すると非常に便利。
 
+## Reference
+
+- [KQCircuits](https://iqm-finland.github.io/KQCircuits/index.html)
+- [PHIDL](https://phidl.readthedocs.io/en/latest/index.html)
+
 ## Anaconda
 
 データサイエンスに必要な各種ツール、ライブラリを提供するプラットフォームです。
@@ -40,6 +45,22 @@ $ which python
 
 $ conda deactivate
 ```
+
+#### conda 環境の export
+
+作成した conda 環境を yaml ファイルに export すると、簡単に同じ環境の conda 環境を作成することができる。
+
+```txt title=conda環境のexport
+// conda 環境に入ってから
+$ conda env export > environment.yml
+// conda 環境の外から
+$ conda env export  -n [仮想環境名] > environment.yml
+```
+
+```txt title=conda環境のimport
+conda env create -f environment.yml
+```
+
 
 #### channel について
 

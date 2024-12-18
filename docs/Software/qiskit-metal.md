@@ -7,7 +7,7 @@ Ansys HFSSには3つの解析方法があり、解析したいモデルの状況
 
 - Driven Modal : 伝搬モードに着目した電磁界解析。導波管などの解析に用いる。 
 - Driven Terminal : ノードに着目した電磁界解析。デジタル信号の解析に用いる。 
-- Eigenmode : 固有値解析。どんな電磁波が閉じ込めることができるかを調べる解析。 
+- Eigen mode : 固有値解析。どんな電磁波が閉じ込めることができるかを調べる解析。 
 
 ### Lumped port と Wave port
 
@@ -126,3 +126,12 @@ Ansys で render したオブジェクトにカーソルを合わせるとその
     - ```Results``` -> ```Create Modal Solution Data Report``` -> ```Rectangular Plot``` ([image](<Screenshot 2024-11-25 at 17.56.38.png>){ width="50%" })
     - Solution から解析したい setup を指定することを忘れずに ([image](<Screenshot 2024-11-25 at 17.57.57.png>){ width="50%" })
     - S-parameter の plot が表示される。([image](<Screenshot 2024-11-26 at 13.30.07.png>){ width="50%" })
+
+
+## Eigen mode
+
+Resonator などの共振周波数を見つけたい場合には、Eigen mode で解析すると良い。
+YouTube にも例があって分かりやすい。
+
+- [Resonator Eigen-Mode and Quality Factor Simulation using HFSS - Quantum Chip Design](https://www.youtube.com/watch?v=H71XHyAYDIY)
+- [Eigenmodes simulation of a cylindrical resonator with HFSS](https://indico.cern.ch/event/1214547/contributions/5109107/attachments/2595259/4479932/EigenmodesResonantCavityHFSS-JUAS23-NERONI.pdf)
