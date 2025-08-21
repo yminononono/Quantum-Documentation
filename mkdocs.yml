@@ -35,6 +35,7 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
+  - obsidian_callouts
 
 plugins:
   - glightbox
@@ -44,6 +45,7 @@ nav:
     - 'Hardware':
       - 'Fabrication': Hardware/Fabrication.md  
       - 'Facilities' : Hardware/Facilities.md
+      - 'Equipment' : Hardware/Equipment.md
     - 'Software':
       - 'GDS': Software/gds.md    
       - 'Qiskit-metal': Software/qiskit-metal.md
