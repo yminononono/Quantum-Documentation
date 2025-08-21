@@ -1,0 +1,837 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../gds/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Qiskit-metal - Quantum Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qiskit-metal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Quantum Documentation" class="md-header__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quantum Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Qiskit-metal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Quantum Documentation" class="md-nav__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Quantum Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Fabrication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fabrication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Facilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Facilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Equipment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Equipment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GDS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Qiskit-metal
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qiskit-metal
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ansys-hfss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ansys HFSS で電磁界シミュレーション
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ansys HFSS で電磁界シミュレーション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lumped-port-wave-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lumped port と Wave port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      シミュレーションの CPU Core の変更
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      電磁場解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッシュの切り方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    <span class="md-ellipsis">
+      実際の script の書き方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gds-file-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      GDS file を import してシミュレーション
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigen-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigen mode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ansys-hfss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ansys HFSS で電磁界シミュレーション
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ansys HFSS で電磁界シミュレーション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lumped-port-wave-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lumped port と Wave port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      シミュレーションの CPU Core の変更
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      電磁場解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      メッシュの切り方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    <span class="md-ellipsis">
+      実際の script の書き方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gds-file-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      GDS file を import してシミュレーション
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigen-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigen mode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="qiskit-metal">Qiskit-metal</h1>
+<h2 id="ansys-hfss">Ansys HFSS で電磁界シミュレーション</h2>
+<p><a href="http://accwww2.kek.jp/oho/oho08/txt08/02%20yoshida2.080825p.pdf">高周波デバイスの設計とシミュレーション</a> の p.11 を参照。
+Ansys HFSSには3つの解析方法があり、解析したいモデルの状況により適切に解析方法を選ぶ必要がある。　　</p>
+<ul>
+<li>Driven Modal : 伝搬モードに着目した電磁界解析。導波管などの解析に用いる。 </li>
+<li>Driven Terminal : ノードに着目した電磁界解析。デジタル信号の解析に用いる。 </li>
+<li>Eigen mode : 固有値解析。どんな電磁波が閉じ込めることができるかを調べる解析。 </li>
+</ul>
+<h3 id="lumped-port-wave-port">Lumped port と Wave port</h3>
+<p><a href="https://ohnolab.deca.jp/wp-content/lab_data/pdf_a/2011_M_Abe_doc.pdf">オープンリング共振器を用いた高周波帯非接触インターフェイスの研究</a>の p.45 を参照。
+HFSS 上で給電部分の設定は Wave port と Lumped port の 2 つが使用できる。<br />
+ここで、Wave portとは「自然給電」のことであり、port が設定されている面の特性インピーダンスを解析し、その結果として得られた特性インピーダンスで給電するものである。<br />
+一方、Lumped portとは「強制給電」のことであり、portが設定されている面に対して解析者が指定した特性インピーダンスで強制的に給電するものである。通常、実験環境をシミュレーションに考慮する場合、Lumped portを仮定する。<br />
+しかし、port面が無反射なWave portに対して、Lumped port はport面では反射が発生する。  </p>
+<h3 id="cpu-core">シミュレーションの CPU Core の変更</h3>
+<p><code>Tools</code> -&gt; <code>Edit Active Analysis Configuration</code> から使用するコア数を変更することができる。</p>
+<p><a class="glightbox" href="Screenshot 2024-11-21 at 17.12.16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="Screenshot 2024-11-21 at 17.12.16.png" width="50%" /></a></p>
+<h3 id="_1">電磁場解析</h3>
+<p><code>Analysis</code> -&gt; <code>Setup</code> -&gt; 電磁場解析を行いたい setup の <code>property</code> から <code>3D Fields Save Options</code> -&gt; <code>Save Fields</code> で frequency sweep を行う際に電磁場も保存するようにする。  </p>
+<p><a class="glightbox" href="Screenshot 2024-11-22 at 16.43.41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="Screenshot 2024-11-22 at 16.43.41.png" width="50%" /></a></p>
+<p>保存した電磁場を表示するには、表示したいオブジェクトを選択した状態で <code>Field Overlays</code> を右クリックし、<code>Plot Fields</code> -&gt; <code>E</code> -&gt; <code>Mag_E</code> で設定画面を表示する。<br />
+表示した画面の <code>Setup</code> から Fast sweep を行った analysis を選択肢し、電磁場の周波数を選択する。</p>
+<p><a class="glightbox" href="Screenshot 2024-11-22 at 16.44.20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="Screenshot 2024-11-22 at 16.44.20.png" width="50%" /></a></p>
+<h3 id="_2">メッシュの切り方</h3>
+<p>Resonator などメッシュの細かさによって解析結果が変わるものについては、ある程度細かく切るように指定する必要がある。
+ただし、全て細かく切ってしまうと非常に時間がかかってしまう。
+以下の図は resonator と ground がつながっているため、周りの ground のメッシュも細かく切ってしまった場合を示している。</p>
+<p><a class="glightbox" href="Screenshot 2024-11-25 at 18.19.26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="Screenshot 2024-11-25 at 18.19.26.png" width="50%" /></a></p>
+<h3 id="script">実際の script の書き方</h3>
+<p>以下では 1 本のフィードラインに同じ共振周波数の 2 本の resonator を capacitive に coupling させて読み出す場合の script で説明する。<br />
+一方の読み出しをフィードラインに、もう一方を resonator の先につけている。</p>
+<p><a class="glightbox" href="Screenshot 2024-11-21 at 10.32.03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="Screenshot 2024-11-21 at 10.32.03.png" width="50%" /></a></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Resonator の共振周波数はメッシュの細かさによって変動するため、以下のようにメッシュを細かくしたいオブジェクトについては指定しておく。</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># for acurate simulations, make sure the mesh is fine enough for the meander</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">accurate_meshlist</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="c1"># 2 つの resonator (trace は線を示している)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s2">&quot;trace_meander1&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s2">&quot;trace_meander2&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1"># resonator と resonator を繋ぐ capacitance pad</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="s2">&quot;pad_right_my_cap_res_res&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="s2">&quot;pad_left_my_cap_res_res&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="s2">&quot;cpw_right_my_cap_res_res&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="s2">&quot;cpw_left_my_cap_res_res&quot;</span><span class="p">,</span>   
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="c1"># resonator と launch pad を繋ぐ capacitance pad</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="s2">&quot;pad_right_my_cap_res_lp&quot;</span><span class="p">,</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="s2">&quot;pad_left_my_cap_res_lp&quot;</span><span class="p">,</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="s2">&quot;cpw_right_my_cap_res_lp&quot;</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="s2">&quot;cpw_left_my_cap_res_lp&quot;</span><span class="p">,</span>    
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">]</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">hfss</span><span class="o">.</span><span class="n">modeler</span><span class="o">.</span><span class="n">mesh_length</span><span class="p">(</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>                <span class="s1">&#39;cpw_mesh&#39;</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                <span class="n">accurate_meshlist</span><span class="p">,</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                <span class="n">MaxLength</span><span class="o">=</span><span class="s1">&#39;0.01mm&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Ansys で render したオブジェクトにカーソルを合わせるとその名前が表示される。</p>
+<p><a class="glightbox" href="Screenshot 2024-11-21 at 10.00.45.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="Screenshot 2024-11-21 at 10.00.45.png" width="50%" /></a></p>
+<p>また実際にどのようにメッシュが切られたか確認するには、<br />
+1. Ansys でオブジェクトを選択 (全て選択したい場合は、<code>Sheets</code> を右クリックして全選択する。)</p>
+<p><a class="glightbox" href="Screenshot 2024-11-21 at 11.11.15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="Screenshot 2024-11-21 at 11.11.15.png" width="50%" /></a></p>
+<ol>
+<li>選択した状態で <code>FieldOverlays</code> を右クリックして <code>Plot Mesh</code> を選択する。</li>
+</ol>
+<p><a class="glightbox" href="Screenshot 2024-11-21 at 11.13.46.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="Screenshot 2024-11-21 at 11.13.46.png" width="50%" /></a></p>
+<h2 id="gds-file-import">GDS file を import してシミュレーション</h2>
+<p>2D transmon のデザインはポジ描画用のため、誘電体部分がgdsで書かれている。
+そのため、gds で作成している間に反転したものを用意しておく。</p>
+<ol>
+<li>まずは新規プロジェクトの作成 (<code>File</code> -&gt; <code>New</code>)</li>
+<li>HFSS design の作成 (<code>Project</code> -&gt; <code>Insert HFSS design</code>)</li>
+<li>HFSS design の Solution type の設定<ul>
+<li>S-parameter の測定などを行いたい場合には、HFSS design を右クリックして <code>Solution Type</code> を選択 (<a href="Screenshot 2024-11-25 at 14.43.43.png" width="50%">image</a>)</li>
+<li><code>HFSS with Hybrid and Arrays</code>, <code>Network Analysis</code>, <code>Modal</code> を選択する。 (<a href="Screenshot 2024-11-25 at 14.44.01.png" width="50%">image</a>)</li>
+</ul>
+</li>
+<li>GDS design の import (<code>Modeler</code> -&gt; <code>Import</code>) (<a href="Screenshot 2024-11-25 at 17.12.47.png" width="50%">image</a> -&gt; <a href="Screenshot 2024-11-25 at 17.13.35.png" width="50%">image</a>)</li>
+<li>Boundary の設定<ul>
+<li>Ground や feedline, resonator など金属が蒸着されている部分を選択し、右クリックで <code>Assign Boundary</code> -&gt; <code>Perfect E</code> を設定する。 (<a href="Screenshot 2024-11-25 at 17.18.03.png" width="50%">image</a>)</li>
+</ul>
+</li>
+<li>シリコン基盤と vacuum の作成<ul>
+<li>Model の中に solid を定義する</li>
+<li><code>Draw</code> -&gt; <code>Box</code> で box を定義する。</li>
+<li>シリコン基盤の場合は、デザインの下に密着するように配置し、<code>Properties</code> から silicon を選択する。 (<a href="Screenshot 2024-11-25 at 17.19.36.png" width="50%">image</a> -&gt; <a href="Screenshot 2024-11-25 at 17.19.08.png" width="50%">image</a>)</li>
+<li>vacuum の場合は、デザイン全体を覆うように選択する。</li>
+</ul>
+</li>
+<li>Port の作成<ul>
+<li>Launch pad の横に四角形の model を用意する。(<code>Draw</code> -&gt; <code>Rectangle</code>) (<a href="Screenshot 2024-11-25 at 17.26.27.png" width="50%">image</a>)</li>
+<li>作成した model を選択し、Lumped port として指定する。(<code>Assign Excitation</code> -&gt; <code>Port</code> -&gt; <code>Lumped Port</code>) (<a href="Screenshot 2024-11-25 at 17.31.09.png" width="50%">image</a>)</li>
+<li><code>Integration Line</code> の指定が必要になるので、図から指定する。(図の赤い矢印) (<a href="Screenshot 2024-11-25 at 17.31.25.png" width="50%">image</a> -&gt; <a href="Screenshot 2024-11-25 at 17.36.54.png" width="50%">image</a>)</li>
+<li>これで入力と出力となるポートを作成する</li>
+</ul>
+</li>
+<li>Mesh の指定<ul>
+<li>Mesh を細かく切りたいオブジェクトを選択し、<code>Assign Mesh Operation</code> -&gt; <code>On Selection</code> -&gt; <code>Length Based</code> を選択 (<a href="Screenshot 2024-11-25 at 17.44.06.png" width="50%">image</a> -&gt; <a href="Screenshot 2024-11-25 at 17.44.19.png" width="50%">image</a>)</li>
+</ul>
+</li>
+<li>Analysis の setup<ul>
+<li><code>Analysis</code> -&gt; <code>Add Solution Setup</code> -&gt; <code>Advanced</code> (<a href="Screenshot 2024-11-25 at 17.45.06.png" width="50%">image</a> -&gt; <a href="Screenshot 2024-11-25 at 17.45.40.png" width="50%">image</a> -&gt; <a href="Screenshot 2024-11-25 at 17.45.46.png" width="50%">image</a>)</li>
+<li>Frequency Sweep を追加する (<a href="Screenshot 2024-11-25 at 17.46.29.png" width="50%">image</a>)</li>
+</ul>
+</li>
+<li>Analysis を走らせる<ul>
+<li><code>&lt;Setup した Analysis&gt;</code> -&gt; <code>Analyze</code>  (<a href="Screenshot 2024-11-25 at 17.46.53.png" width="50%">image</a>)</li>
+</ul>
+</li>
+<li>Results の確認<ul>
+<li><code>Results</code> -&gt; <code>Create Modal Solution Data Report</code> -&gt; <code>Rectangular Plot</code> (<a href="Screenshot 2024-11-25 at 17.56.38.png" width="50%">image</a>)</li>
+<li>Solution から解析したい setup を指定することを忘れずに (<a href="Screenshot 2024-11-25 at 17.57.57.png" width="50%">image</a>)</li>
+<li>S-parameter の plot が表示される。(<a href="Screenshot 2024-11-26 at 13.30.07.png" width="50%">image</a>)</li>
+</ul>
+</li>
+</ol>
+<h2 id="eigen-mode">Eigen mode</h2>
+<p>Resonator などの共振周波数を見つけたい場合には、Eigen mode で解析すると良い。
+YouTube にも例があって分かりやすい。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=H71XHyAYDIY">Resonator Eigen-Mode and Quality Factor Simulation using HFSS - Quantum Chip Design</a></li>
+<li><a href="https://indico.cern.ch/event/1214547/contributions/5109107/attachments/2595259/4479932/EigenmodesResonantCavityHFSS-JUAS23-NERONI.pdf">Eigenmodes simulation of a cylindrical resonator with HFSS</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
