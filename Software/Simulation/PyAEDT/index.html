@@ -1,0 +1,894 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>PyAEDT - Quantum Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Quantum Documentation" class="md-header__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quantum Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PyAEDT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Quantum Documentation" class="md-nav__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Quantum Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hardware/Fabrication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabrication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hardware/Facilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Facilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hardware/Equipment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GDS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qiskit-metal.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qiskit-metal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考資料
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facewave-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特定の面(face)を取得して、wave port を割り当てたい
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigenmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenmode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eigenmode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solved Frequency の取得
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimetrics-option-save-fields-and-mesh-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimetrics の option (Save Fields and Mesh) を ON にする方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sweep の追加
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object の property の変更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object の Clone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hfss-e-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HFSS で表示される E-field を調整する方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plot-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plot の scale の変更
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trouble-shooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trouble Shooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trouble Shooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sheet-mesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sheet のMesh が切れない
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>PyAEDT</h1>
+
+<h2 id="_1">参考資料</h2>
+<hr>
+<ul>
+<li>PyAEDT Client Library Cheat Sheet : https://developer.ansys.com/blog/pyaedt-client-library-cheat-sheet</li>
+<li>Setup を作る際に設定可能な dictionary まとめ : https://github.com/ansys/pyaedt/blob/2e2f96c9e9437d20e7a5fa8d36c079fb8fc16b0f/src/ansys/aedt/core/modules/setup_templates.py#L121</li>
+<li>PostProcessing のexample script : https://github.com/ansys/pyaedt/blob/2e2f96c9e9437d20e7a5fa8d36c079fb8fc16b0f/tests/system/visualization/test_12_1_PostProcessing.py#L102</li>
+</ul>
+<h2 id="object">Object</h2>
+<hr>
+<h3 id="facewave-port">特定の面(face)を取得して、wave port を割り当てたい</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># faces = port_in_object.faces</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># port_in_face = max(faces, key=lambda f: f.center[1])</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">port_in_face</span> <span class="o">=</span> <span class="n">port_in_object</span><span class="o">.</span><span class="n">top_face_y</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">hfss</span><span class="o">.</span><span class="n">wave_port</span><span class="p">(</span><span class="n">assignment</span><span class="o">=</span><span class="n">port_in_face</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">"Port_in"</span><span class="p">,</span> <span class="n">modes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="eigenmode">Eigenmode</h2>
+<hr>
+<h3 id="solved-frequency">Solved Frequency の取得</h3>
+<p></p><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">expressions</span><span class="o">=</span><span class="p">[</span><span class="s2">"Mode(1)"</span><span class="p">,</span><span class="s2">"Mode(2)"</span><span class="p">,</span><span class="s2">"Mode(3)"</span><span class="p">]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">report</span> <span class="o">=</span> <span class="n">hfss</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">reports_by_category</span><span class="o">.</span><span class="n">eigenmode</span><span class="p">(</span><span class="n">expressions</span><span class="o">=</span><span class="n">expressions</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">solution_data</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">get_solution_data</span><span class="p">()</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">solution_data</span><span class="o">.</span><span class="n">export_data_to_csv</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s2">"test.csv"</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">for</span> <span class="n">mode</span> <span class="ow">in</span> <span class="n">expressions</span><span class="p">:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">freq</span> <span class="o">=</span> <span class="n">solution_data</span><span class="o">.</span><span class="n">data_real</span><span class="p">(</span><span class="n">mode</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">Q</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">freq</span> <span class="o">/</span> <span class="n">solution_data</span><span class="o">.</span><span class="n">data_imag</span><span class="p">(</span><span class="n">mode</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Frequency : "</span><span class="p">,</span><span class="n">freq</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">,</span> <span class="s2">" [GHz]"</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Q-value   : "</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
+</span></code></pre></div>
+expressions がわからない場合は
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">report</span> <span class="o">=</span> <span class="n">hfss</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">reports_by_category</span><span class="o">.</span><span class="n">eigenmode</span><span class="p">()</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">solution_data</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">get_solution_data</span><span class="p">()</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span> <span class="n">solution_data</span><span class="o">.</span><span class="n">expressions</span> <span class="p">)</span>
+</span></code></pre></div><p></p>
+<h2 id="report">Report</h2>
+<hr>
+<ul>
+<li>Eigen mode の固有振動数や Driven Modal による S-parameter の結果を取得する方法</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">report_config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="c1">#expressions=["db(S12)"], </span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">expressions</span><span class="o">=</span><span class="p">[</span><span class="s2">"db(S(Port_out,Port_in))"</span><span class="p">,</span><span class="s2">"db(S(Port_out1,Port_in))"</span><span class="p">],</span> 
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">plot_name</span><span class="o">=</span><span class="s2">"S-parameter"</span><span class="p">,</span> 
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">variations</span><span class="o">=</span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="s2">"Freq"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"All"</span><span class="p">],</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># 例えば chip_inductance を変更しながら、parametric sweep を行った場合</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">report_config</span><span class="p">[</span><span class="s2">"variations"</span><span class="p">][</span><span class="s2">"$chip_inductance"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"All"</span><span class="p">]</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">report</span> <span class="o">=</span> <span class="n">hfss</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">create_report</span><span class="p">(</span> <span class="o">**</span><span class="n">report_config</span> <span class="p">)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1">## Solution data の取得と出力</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">solution_data</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">get_solution_data</span><span class="p">()</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">solution_data</span><span class="o">.</span><span class="n">export_data_to_csv</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s2">"CoaxCavity_Modal.csv"</span><span class="p">)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="c1"># Get frequency list</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="n">freq_list</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">solution_data</span><span class="o">.</span><span class="n">variation_values</span><span class="p">(</span><span class="n">variation</span><span class="o">=</span><span class="s2">"Freq"</span><span class="p">)</span> <span class="p">]</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="c1"># 色々な sweep での S21 を取得したい場合</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="n">mode_S_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">solution_data</span><span class="o">.</span><span class="n">variations</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">freq_list</span><span class="p">)))</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">solution_data</span><span class="o">.</span><span class="n">variations</span><span class="p">)):</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="n">solution_data</span><span class="o">.</span><span class="n">set_active_variation</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    <span class="n">mode_S_array</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">solution_data</span><span class="o">.</span><span class="n">data_real</span><span class="p">()</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"Frequency [GHz]"</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"S21"</span><span class="p">)</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">solution_data</span><span class="o">.</span><span class="n">variations</span><span class="p">)):</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freq_list</span><span class="p">,</span> <span class="n">mode_S_array</span><span class="p">[</span><span class="nb">id</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s2">"."</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="common">Common</h2>
+<hr>
+<h3 id="optimetrics-option-save-fields-and-mesh-on">Optimetrics の option (Save Fields and Mesh) を ON にする方法</h3>
+<ul>
+<li>https://github.com/ansys/pyaedt/discussions/4663
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">hfss</span><span class="o">.</span><span class="n">set_oo_property_value</span><span class="p">(</span><span class="n">aedt_object</span><span class="o">=</span><span class="n">hfss</span><span class="o">.</span><span class="n">ooptimetrics</span><span class="p">,</span> <span class="n">object_name</span><span class="o">=</span><span class="s2">"Parametric _Setup_Name"</span><span class="p">,</span> <span class="n">prop_name</span><span class="o">=</span><span class="s1">'SaveFields'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">'True'</span><span class="p">)</span>
+</span></code></pre></div></li>
+</ul>
+<p>さらに他の option を追加したい場合、以下のようにして property を調べることが可能
+</p><div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">sweep</span><span class="o">.</span><span class="n">available_properties</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">[</span><span class="s1">'IsEnabled'</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a> <span class="s1">'ProdOptiSetupDataV2'</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a> <span class="s1">'ProdOptiSetupDataV2/SaveFields'</span><span class="p">,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a> <span class="s1">'ProdOptiSetupDataV2/CopyMesh'</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a> <span class="s1">'ProdOptiSetupDataV2/SolveWithCopiedMeshOnly'</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a> <span class="s1">'StartingPoint'</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a> <span class="s1">'Sim. Setups'</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a> <span class="s1">'Sweeps'</span><span class="p">,</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a> <span class="s1">'Sweeps/SweepDefinition'</span><span class="p">,</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a> <span class="s1">'Sweep Operations'</span><span class="p">,</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a> <span class="s1">'Goals'</span><span class="p">]</span>
+</span></code></pre></div><p></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ただし、SaveFields 以外の変数がなぜか set_oo_property_value で書き換えられない...
+ 一応以下のように直接書き換えることはできる。
+ さらに CopyMesh を書き換える場合、SaveFields も dictionary から直接書き換える必要があるらしい
+<code>python
+sweep.props["ProdOptiSetupDataV2"]["SaveFields"] = True
+sweep.props["ProdOptiSetupDataV2"]["CopyMesh"] = True</code> </p>
+</div>
+<h3 id="sweep">Sweep の追加</h3>
+<ul>
+<li>Sweep で追加可能な sweep type について : https://pyepr-docs.readthedocs.io/en/latest/_modules/pyEPR/ansys.html</li>
+</ul>
+<h3 id="object-property">Object の property の変更</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">vacuum_object</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"boundary"</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">vacuum_object</span> <span class="o">=</span> <span class="n">hfss</span><span class="o">.</span><span class="n">modeler</span><span class="o">.</span><span class="n">get_object_from_name</span><span class="p">(</span><span class="s2">"boundary"</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">hfss</span><span class="o">.</span><span class="n">assign_material</span><span class="p">(</span><span class="s2">"boundary"</span><span class="p">,</span> <span class="s2">"vacuum"</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">hfss</span><span class="o">.</span><span class="n">modeler</span><span class="o">.</span><span class="n">move_face</span><span class="p">([</span><span class="n">vacuum_object</span><span class="o">.</span><span class="n">top_face_z</span><span class="p">],</span> <span class="n">offset</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># offset in mm</span>
+</span></code></pre></div>
+<h3 id="object-clone">Object の Clone</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">vacuum_object</span> <span class="o">=</span> <span class="n">box_object</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="hfss-e-field">HFSS で表示される E-field を調整する方法</h3>
+<p>https://aedt.docs.pyansys.com/version/stable/API/_autosummary/ansys.aedt.core.hfss.Hfss.edit_sources.html
+</p><div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">sources</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"1"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span> <span class="s2">"3"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">}</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">hfss</span><span class="o">.</span><span class="n">edit_sources</span><span class="p">(</span><span class="n">sources</span><span class="p">,</span> <span class="n">eigenmode_stored_energy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div><p></p>
+<h3 id="plot-scale">Plot の scale の変更</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">## min &amp; max が欲しい plot を表示する</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">plane_plot</span> <span class="o">=</span> <span class="n">hfss</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">create_fieldplot_cutplane</span><span class="p">(</span><span class="s2">"Global:YZ"</span><span class="p">,</span> <span class="s2">"Mag_E"</span><span class="p">,</span> <span class="n">plot_name</span> <span class="o">=</span> <span class="s2">"plane_Mag"</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">sources</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"1"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span> <span class="s2">"3"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">}</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">hfss</span><span class="o">.</span><span class="n">edit_sources</span><span class="p">(</span><span class="n">sources</span><span class="p">,</span> <span class="n">eigenmode_stored_energy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">min_value</span> <span class="o">=</span> <span class="n">hfss</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">get_scalar_field_value</span><span class="p">(</span><span class="s2">"Mag_E"</span><span class="p">,</span><span class="s2">"Minimum"</span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">max_value</span> <span class="o">=</span> <span class="n">hfss</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">get_scalar_field_value</span><span class="p">(</span><span class="s2">"Mag_E"</span><span class="p">,</span><span class="s2">"Maximum"</span><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">max_value</span><span class="p">,</span> <span class="n">min_value</span><span class="p">)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">plane_plot</span><span class="o">.</span><span class="n">change_plot_scale</span><span class="p">(</span><span class="n">maximum_value</span><span class="o">=</span><span class="n">max_value</span><span class="p">,</span> <span class="n">minimum_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">is_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="c1">## 以下の方法でも同様に plot scale を変更することができる</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="c1"># hfss.post.change_field_plot_scale(plot_name="plane_Mag1", maximum_value=max_value, minimum_value=1, is_log=True )</span>
+</span></code></pre></div>
+<h2 id="trouble-shooting">Trouble Shooting</h2>
+<hr>
+<h3 id="sheet-mesh">Sheet のMesh が切れない</h3>
+<ul>
+<li>以下のように sheet に対して mesh を細かく切りたい場合、inside_selection option を False にしないと object の内部の mesh を細かく切ろうとしてしまう
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">hfss</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">assign_length_mesh</span><span class="p">([</span><span class="s2">"cap1"</span><span class="p">,</span> <span class="s2">"cap2"</span><span class="p">],</span> <span class="n">inside_selection</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">maximum_length</span><span class="o">=</span><span class="s2">"20um"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"mesh_cap"</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">hfss</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">assign_length_mesh</span><span class="p">([</span><span class="s2">"port_out"</span><span class="p">],</span> <span class="n">inside_selection</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">maximum_length</span><span class="o">=</span><span class="s2">"5um"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"mesh_JJ"</span><span class="p">)</span> <span class="c1"># maximum 7um for JJ in qiskit-metal</span>
+</span></code></pre></div></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

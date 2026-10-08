@@ -1,0 +1,1081 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>IQM - Quantum Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iqm-qiskit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Quantum Documentation" class="md-header__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quantum Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IQM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Quantum Documentation" class="md-nav__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Quantum Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hardware/Fabrication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabrication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hardware/Facilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Facilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hardware/Equipment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GDS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qiskit-metal.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qiskit-metal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#iqm-qiskit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IQM Qiskit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IQM Qiskit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        回路の実行結果のSimulation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="回路の実行結果のSimulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statevector-or-density-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StateVector or Density Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noisy-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noisy Simulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readout-error-mitigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readout Error Mitigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-state-tomography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantum State Tomography
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benchmark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calibration-id-qubit-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calibration ID と Qubit mapping の取得
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-qubit-calibration-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API で Qubit や calibration data を取得する方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transpile_to_iqm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        transpile_to_IQM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        その他
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogram の作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iqm-pulla-pulse-level-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IQM PulLa (Pulse level access)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-mock-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        - Mock environment に投げることはできないので、実際に走らせるしかない
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="- Mock environment に投げることはできないので、実際に走らせるしかない">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calibration ID の取得方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate implementation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gate implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate について
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default implementation の切り替え
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        既存のゲート操作をコピーして、パラメータのみ書き換える
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux-voltage-awg-drive-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        量子ビットの flux voltage や AWG drive frequency などの取得方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux-bias-measurement-constant-iq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux bias や measurement constant を書き換える方法 (IQ 平面上の結果を得る方法)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>IQM</h1>
+
+<ul>
+<li>IQM Qiskit : https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html</li>
+<li>IQM Pulla (for pulse-level access)<ul>
+<li>https://docs.meetiqm.com/iqm-pulla/</li>
+<li>https://docs.meetiqm.com/iqm-pulse/</li>
+</ul>
+</li>
+</ul>
+<h2 id="iqm-qiskit">IQM Qiskit</h2>
+<h3 id="step">Step</h3>
+<ol>
+<li>使用する量子コンピュータにトークンを使用してアクセス</li>
+<li>ゲート操作のための回路図やブロックダイアグラムを書く</li>
+<li>トランスパイルで作成した回路図を変換</li>
+<li>量子コンピュータにトランスパイルしたものを submit</li>
+<li>job から results を取得</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">コンパイルとトランスパイルの違い</p>
+<p>コンパイル → 高級言語 → 低級言語（機械が直接理解できる形へ変換）
+トランスパイル → 高級言語 → 高級言語（人間が読める形のまま別の言語へ変換）</p>
+</div>
+<h3 id="simulation">回路の実行結果のSimulation</h3>
+<ul>
+<li>StateVector or Density Matrix</li>
+<li>Ideal simulation : AerSimulator</li>
+<li>Noisy simulation : IQM Fake backend</li>
+</ul>
+<h4 id="statevector-or-density-matrix">StateVector or Density Matrix</h4>
+<ul>
+<li>https://quantum.cloud.ibm.com/docs/en/guides/plot-quantum-states</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.quantum_info</span><span class="w"> </span><span class="kn">import</span> <span class="n">Statevector</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Create a Bell state for demonstration</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">qc</span><span class="o">.</span><span class="n">crx</span><span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">psi</span> <span class="o">=</span> <span class="n">Statevector</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">psi</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s2">"latex"</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">psi</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s2">"city"</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">psi</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s2">"hinton"</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="noisy-simulation">Noisy Simulation</h4>
+<p>https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html#noisy-simulation-of-quantum-circuit-execution</p>
+<p>IQM では QC のアーキテクチャを模した Fake backend が提供されており、それを用いたシミュレーションを行うことができる。mock を使う場合は、ランダムな結果しか得られない。
+提供されている Fake backend の種類は<a href="https://iqm-finland.github.io/qiskit-on-iqm/api/iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.html">ここ</a>で確認することができる。(2025年10月時点で提供されているのは、adonis, aphrodite, apollo, deneb, garnet)
+この中で star architecture は deneb のみのため、sirius の simulation を行いたい場合は deneb を使用する？</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Fake backend は量子ビットの寿命などを設定できるが、T1 測定などを行っても指数関数分布が見えるわけではないので、delay などはシミュレーションできない？</p>
+</div>
+<h3 id="readout-error-mitigation">Readout Error Mitigation</h3>
+<p>Garnet machine などは readout error が大きいため、Readout Error Mitigation (REM) を行うことで結果がかなり改善できる。
+REM は各 Qubit を別々に励起したときに、他の Qubit が励起される割合などを示す confusion matrix を取得し、その逆行列を REM を行いたい結果に対してかけることで補正する。
+Qiskit にはこれを行うための package が用意されており、LocalReadoutError と CorrelatedReadoutError の 2種類の補正方法がある。
+前者は、量子ビットが全て基底状態もしくは励起状態の場合に観測される状態を用いて confusion matrix を作成するため、走らせる回路数は 2 つのみ。
+後者は、すべての状態ベクトルを生成する回路を準備することで confusion matrix を作成するため、精度は良くなるが、回路数は bit 数によって増加する。
+上記の module は IQM backend ではそのまま動かないため、以下のように少し修正する必要がある。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_experiments.library</span><span class="w"> </span><span class="kn">import</span> <span class="n">LocalReadoutError</span><span class="p">,</span> <span class="n">CorrelatedReadoutError</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">qubits</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">backend</span> <span class="o">=</span> <span class="n">ns_arxiv</span><span class="o">.</span><span class="n">fakebackend</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">exp</span> <span class="o">=</span> <span class="n">LocalReadoutError</span><span class="p">(</span><span class="n">qubits</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">exp</span><span class="o">.</span><span class="n">circuits</span><span class="p">():</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span> <span class="c1"># ここに {'state_label': '000'} のような情報が入っている</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">exp</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">exp</span><span class="o">.</span><span class="n">set_run_options</span><span class="p">(</span><span class="n">shots</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># analysis does not run for IQM fake &amp; real backend since circuit metadata is not correctly propagated</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># backend_run must be set to true to retrieve data from IQM backend</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">result</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">analysis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backend_run</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">block_for_results</span><span class="p">()</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">expdata</span> <span class="o">=</span> <span class="n">ExperimentData</span><span class="p">(</span><span class="n">experiment</span><span class="o">=</span><span class="n">exp</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">exp</span><span class="o">.</span><span class="n">backend</span><span class="p">)</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">circ</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">exp</span><span class="o">.</span><span class="n">circuits</span><span class="p">()):</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="n">expdata</span><span class="o">.</span><span class="n">add_data</span><span class="p">({</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        <span class="s2">"counts"</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="p">()[</span><span class="n">i</span><span class="p">][</span><span class="s1">'counts'</span><span class="p">],</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        <span class="s2">"metadata"</span><span class="p">:</span> <span class="n">circ</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span> <span class="c1"># ここで state_label を明示的に補完</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        <span class="s2">"shots"</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">})</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="c1"># Rerun analysis with metadata (state_label)</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">analysis_result</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">expdata</span><span class="p">)</span><span class="o">.</span><span class="n">block_for_results</span><span class="p">()</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">display</span><span class="p">(</span><span class="n">analysis_result</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</span></code></pre></div>
+<h3 id="quantum-state-tomography">Quantum State Tomography</h3>
+<p>測定結果から city plot などを作成するには以下のように StateTomography 用の回路を作成する必要がある。
+https://qiskit-community.github.io/qiskit-experiments/stubs/qiskit_experiments.library.tomography.StateTomography.html</p>
+<h3 id="benchmark">Benchmark</h3>
+<p>IQM では QC の性能を測定するための benchmark script が<a href="https://github.com/iqm-finland/sdk/tree/main/iqm_benchmarks/src/iqm/benchmarks">ここ</a>に色々と用意されている。
+例えば、量子ビットの性能を測定するための T1, T2 echo 測定を<a href="https://iqm-finland.github.io/iqm-benchmarks/examples/example_coherence.html">ここ</a>に書いてあるように行うことができる。</p>
+<h3 id="calibration-id-qubit-mapping">Calibration ID と Qubit mapping の取得</h3>
+<h3 id="api-qubit-calibration-data">API で Qubit や calibration data を取得する方法</h3>
+<p>https://resonance.meetiqm.com/docs/api-reference?api=server&amp;qc=emerald が 2025年10月時点で使用可能な API の instruction。
+HTTP を使用しており、Qubit の lifetime や共振周波数などの情報を取得することができる。
+Terminal から json file の情報を取得する場合のコマンドは、</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer &lt;token&gt;"</span><span class="w"> </span>https://resonance.meetiqm.com/api/v1/quantum-computers/emerald/artifacts/chip-design-records
+</span></code></pre></div>
+<p>python script を使用する場合は、以下のように書く</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">url</span> <span class="o">=</span> <span class="p">(</span> <span class="sa">f</span><span class="s2">"https://resonance.meetiqm.com/api/v1/calibration-sets/</span><span class="si">{</span><span class="n">system</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">cal_set</span><span class="si">}</span><span class="s2">/metrics"</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"Bearer </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s2">"</span><span class="p">}</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">calibration</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># dut field の取得</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">for</span> <span class="n">iq</span> <span class="ow">in</span> <span class="n">calibration</span><span class="p">[</span><span class="s1">'observations'</span><span class="p">]:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">dut_field</span> <span class="o">=</span> <span class="n">iq</span><span class="p">[</span><span class="s1">'dut_field'</span><span class="p">]</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="c1"># characterization.model.QB1.t1_time</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="c1"># characterization.model.QB1.t2_time</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="c1"># characterization.model.QB1.t2_echo_time</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="c1"># metrics.rb.clifford.xy.QB1.fidelity</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="c1"># metrics.rb.clifford.xy.QB1.fidelity:par=d1</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="c1"># metrics.rb.prx.drag_crf.QB1.fidelity:par=d1</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="c1"># metrics.ssro.measure.constant.QB1.fidelity</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">API</p>
+<p>API とは Application Programming Interface の略称で、異なるソフトウェアやアプリケーションが相互にデータや機能を利用するための「窓口」となる仕組みを示している。</p>
+</div>
+<h3 id="transpile_to_iqm">transpile_to_IQM</h3>
+<ul>
+<li>https://docs.iqm.tech/iqm-client/api/iqm.qiskit_iqm.iqm_naive_move_pass.transpile_to_IQM.html</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Customized transpilation to IQM backends.
+Works with both the Crystal and Star architectures.</p>
+<p>Note: When transpiling a circuit with MOVE gates, you might need to set&nbsp;<code>optimization_level</code>&nbsp;lower. If&nbsp;<code>optimization_level</code>&nbsp;is set too high, the transpiler might add single qubit gates onto the resonator, which is not supported by the IQM Star architectures. If this in undesired, it is best to have the transpiler add the MOVE gates automatically, rather than manually adding them to the circuit.</p>
+</div>
+<h3 id="_1">その他</h3>
+<h4 id="histogram">Histogram の作成</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.visualization</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_distribution</span><span class="p">,</span> <span class="n">plot_histogram</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">legend</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Mitigated Probabilities'</span><span class="p">,</span> <span class="s1">'Unmitigated Probabilities'</span><span class="p">]</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># plot_histogram は counts をそのまま表示し、plot_distribution は 1 に規格化される</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">plot_distribution</span><span class="p">(</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="p">[</span><span class="n">mitigated_probs</span><span class="p">,</span> <span class="n">unmitigated_probs</span><span class="p">],</span> <span class="c1"># counts の dictionary</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">legend</span><span class="o">=</span><span class="n">legend</span><span class="p">,</span> 
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">sort</span><span class="o">=</span><span class="s2">"value_desc"</span><span class="p">,</span> 
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">bar_labels</span><span class="o">=</span><span class="kc">False</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="iqm-pulla-pulse-level-access">IQM PulLa (Pulse level access)</h2>
+<ul>
+<li>Tutorial<ul>
+<li>https://www.iqmacademy.com/tutorials/</li>
+<li>https://docs.meetiqm.com/iqm-pulla/examples.html</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Pulla を使用するときの注意点</p>
+<h2 id="-mock-environment">- Mock environment に投げることはできないので、実際に走らせるしかない</h2>
+</div>
+<h3 id="calibration-id">Calibration ID の取得方法</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>p = Pulla(url)
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>p.fetch_default_calibration_set()[1]
+</span></code></pre></div>
+<h3 id="gate-implementation">Gate implementation</h3>
+<ul>
+<li>https://docs.meetiqm.com/iqm-pulla/Custom%20Gates%20and%20Implementations.html#</li>
+</ul>
+<h4 id="gate">Gate について</h4>
+<ul>
+<li>IQM Pulla ではゲート操作の実装方法の変更や新たなゲート操作を定義することができる</li>
+<li>使用可能なゲート操作は以下のように確認することができる
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">p</span> <span class="o">=</span> <span class="n">Pulla</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">compiler</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_standard_compiler</span><span class="p">()</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">compiler</span><span class="o">.</span><span class="n">print_all_implementations_trees</span><span class="p">()</span>
+</span></code></pre></div></li>
+<li>各 gate には calibration data (duration, frequency, width, amplitude) が設定されており、以下から実際の値を確認することができる。
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span> <span class="n">compiler</span><span class="o">.</span><span class="n">get_calibration_set_values</span><span class="p">()</span> <span class="p">)</span>
+</span></code></pre></div>
+gate の calibration data の key は以下のように設定されている。</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>gates.&lt;gate名&gt;.&lt;implementation&gt;.&lt;qubit&gt;.&lt;parameter名&gt;
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a># gates.prx.drag_crf_sx.QB14.amplitude_i': 0.16482464499820992
+</span></code></pre></div>
+<h4 id="default-implementation">Default implementation の切り替え</h4>
+<p>Default gate には複数の implementation が設定されている場合がある。
+例えば <code>prx</code> gate には <code>drag_gaussian</code>, <code>drag_crf</code>, <code>drag_crf_sx</code>, <code>drag_gaussian_sx</code> と 4 つの implementation が設定されており。
+</p><div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">compiler</span><span class="o">.</span><span class="n">set_default_implementation</span><span class="p">(</span><span class="s1">'cz'</span><span class="p">,</span> <span class="s1">'slepian'</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">compiler</span><span class="o">.</span><span class="n">set_default_implementation_for_loci</span><span class="p">(</span><span class="s1">'cz'</span><span class="p">,</span> <span class="s1">'tgss'</span><span class="p">,</span> <span class="p">[(</span><span class="s1">'QB1'</span><span class="p">,</span> <span class="s1">'QB2'</span><span class="p">)])</span>
+</span></code></pre></div><p></p>
+<h4 id="_2">既存のゲート操作をコピーして、パラメータのみ書き換える</h4>
+<p>以下では既存の <code>prx_12</code> pulse をそのままコピーして、calibration data のみを変更した <code>prx_23</code> pulse を定義する。
+まずは <code>prx_12</code> pulse がどのように定義されているか確認する。
+Anaconda を使用している場合、default gate の実装は <code>/opt/anaconda3/envs/iqm-pulla/lib/python3.11/site-packages/iqm/pulse/gates/default_gates.py</code> から確認することができる。</p>
+<p></p><div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">_implementation_library</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">GateImplementation</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="o">...</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="s2">"prx"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        <span class="s2">"drag_gaussian"</span><span class="p">:</span> <span class="n">PRX_DRAGGaussian</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="s2">"drag_crf"</span><span class="p">:</span> <span class="n">PRX_DRAGCosineRiseFall</span><span class="p">,</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="s2">"drag_crf_sx"</span><span class="p">:</span> <span class="n">PRX_DRAGCosineRiseFallSX</span><span class="p">,</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        <span class="s2">"drag_gaussian_sx"</span><span class="p">:</span> <span class="n">PRX_DRAGGaussianSX</span><span class="p">,</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>        <span class="p">},</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="s2">"prx_12"</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="s2">"modulated_drag_crf"</span><span class="p">:</span> <span class="n">PRX_ModulatedDRAGCosineRiseFall</span><span class="p">,</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="p">},</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">}</span>
+</span></code></pre></div>
+上記より、<code>prx_12</code> は <code>PRX_ModulatedDRAGCosineRiseFall</code> で定義されていることが分かる。
+<code>prx</code> は複数の implementation があり、それぞれ別の class で定義されている。
+<code>PRX_ModulatedDRAGCosineRiseFall</code> などの class は <code>/opt/anaconda3/envs/iqm-pulla/lib/python3.11/site-packages/iqm/pulse/gates/prx.py</code> で定義されており、import することができる。
+以下では <code>prx_12</code> pulse の implementation をそのままコピーして、<code>prx_23</code> pulse を新たに作成し、<code>amplitude_i</code> と <code>frequency</code> のみを変更している。
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulse.gate_implementation</span><span class="w"> </span><span class="kn">import</span> <span class="n">CompositeGate</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulse.gates.prx</span><span class="w"> </span><span class="kn">import</span> <span class="n">PRX_ModulatedDRAGCosineRiseFall</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulse.quantum_ops</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumOp</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">compiler</span><span class="o">.</span><span class="n">add_implementation</span><span class="p">(</span><span class="s1">'prx_23'</span><span class="p">,</span> <span class="s1">'modulated_drag_crf'</span><span class="p">,</span> <span class="n">PRX_ModulatedDRAGCosineRiseFall</span><span class="p">,</span> <span class="n">quantum_op</span><span class="o">=</span><span class="n">QuantumOp</span><span class="p">(</span><span class="s1">'prx_23'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">'angle'</span><span class="p">:</span> <span class="p">(</span><span class="nb">float</span><span class="p">,),</span> <span class="s1">'phase'</span><span class="p">:</span> <span class="p">(</span><span class="nb">float</span><span class="p">,)}))</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="n">qubits</span><span class="p">:</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="n">cal_dict</span> <span class="o">=</span> <span class="n">compiler</span><span class="o">.</span><span class="n">get_calibration_set_values</span><span class="p">()</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    <span class="n">common_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"gates.prx_12.modulated_drag_crf.</span><span class="si">{</span><span class="n">qubit</span><span class="si">}</span><span class="s2">."</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="n">custom_cal_data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>        <span class="s2">"duration"</span> <span class="p">:</span> <span class="n">cal_dict</span><span class="p">[</span> <span class="n">common_key</span> <span class="o">+</span> <span class="s2">"duration"</span> <span class="p">],</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>        <span class="s2">"amplitude_i"</span> <span class="p">:</span> <span class="n">cal_dict</span><span class="p">[</span> <span class="n">common_key</span> <span class="o">+</span> <span class="s2">"amplitude_i"</span> <span class="p">]</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">3.</span><span class="o">/</span><span class="mf">2.</span><span class="p">),</span> <span class="c1"># Not sure why this number works...</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>        <span class="s2">"amplitude_q"</span> <span class="p">:</span> <span class="n">cal_dict</span><span class="p">[</span> <span class="n">common_key</span> <span class="o">+</span> <span class="s2">"amplitude_q"</span> <span class="p">],</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>        <span class="s2">"frequency"</span> <span class="p">:</span> <span class="n">cal_dict</span><span class="p">[</span> <span class="n">common_key</span> <span class="o">+</span> <span class="s2">"frequency"</span> <span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>        <span class="s2">"full_width"</span> <span class="p">:</span> <span class="n">cal_dict</span><span class="p">[</span> <span class="n">common_key</span> <span class="o">+</span> <span class="s2">"full_width"</span> <span class="p">],</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>        <span class="s2">"center_offset"</span> <span class="p">:</span> <span class="n">cal_dict</span><span class="p">[</span> <span class="n">common_key</span> <span class="o">+</span> <span class="s2">"center_offset"</span> <span class="p">]</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="p">}</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>    <span class="c1"># Amend default calibration configuration</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>    <span class="n">compiler</span><span class="o">.</span><span class="n">amend_calibration_for_gate_implementation</span><span class="p">(</span><span class="s1">'prx_23'</span><span class="p">,</span> <span class="s1">'modulated_drag_crf'</span><span class="p">,</span> <span class="p">(</span><span class="n">qubit</span><span class="p">,),</span> <span class="n">custom_cal_data</span><span class="p">)</span>
+</span></code></pre></div><p></p>
+<h3 id="flux-voltage-awg-drive-frequency">量子ビットの flux voltage や AWG drive frequency などの取得方法</h3>
+<ul>
+<li>https://docs.meetiqm.com/iqm-pulla/Configuration%20and%20Usage.html#basics</li>
+</ul>
+<h3 id="flux-bias-measurement-constant-iq">Flux bias や measurement constant を書き換える方法 (IQ 平面上の結果を得る方法)</h3>
+<ul>
+<li>https://docs.meetiqm.com/iqm-pulla/Configuration%20and%20Usage.html#complex-readout</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

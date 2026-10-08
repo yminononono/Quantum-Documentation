@@ -1,0 +1,751 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>QUP - Quantum Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Quantum Documentation" class="md-header__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quantum Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              QUP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Quantum Documentation" class="md-nav__button md-logo" aria-label="Quantum Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Quantum Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fabrication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabrication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Facilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Facilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Equipment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/gds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GDS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/qiskit-metal.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qiskit-metal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        測定準備
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="測定準備">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配線
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch の切り替え
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TWPA の設定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        測定マニュアル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="測定マニュアル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thermal-excitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thermal Excitation の測定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shutdown
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="qup">QUP</h1>
+<ul>
+<li><a href="https://docs.google.com/document/d/16otyHMNd5tmi_xl9mQ8esiEbh2H0Zfm6/edit?usp=sharing&amp;ouid=109150202109451728792&amp;rtpof=true&amp;sd=true">XLD400各種情報</a></li>
+<li><a href="https://docs.google.com/document/d/1XVcxPWp-U0HxeLB7X69TAbZOD16N44kaFmRCdPP3zPc/edit?usp=sharing">Measurement manual</a> (by 中村くん)</li>
+</ul>
+<h2 id="_1">測定準備</h2>
+<hr>
+<h3 id="_2">配線</h3>
+<ul>
+<li>RF line や DC line に何がつながっているかはホワイトボードに書かれている</li>
+<li>RF line は 1 ~ 7 と 1 ~ 10 の 2 セットが書かれているが、これはポートが二つあることに対応している。希釈の外のラインの番号は上から連続で 1 ~ 17 に対応するので、2 セット目の 1 ~ 10 は 8 ~ 17 と読み替える必要がある。</li>
+<li>RF line は手前から 1 ~ 4, 5 ~ 8 ... と番号が続いている。(写真の C が 2 番目)
+![[IMG_5595.jpg|300]]</li>
+</ul>
+<h3 id="switch">Switch の切り替え</h3>
+<ul>
+<li>Switch に何がつながっているかはホワイトボードに</li>
+<li>黄色の線が Switch A, 黒色の線が Switch B に対応している</li>
+<li>ON にしている Line が n 番目とすると、n 番目の線を赤の鰐口クリップに、n+1 番目の線を黒色の鰐口クリップに挟んでスイッチを押す</li>
+</ul>
+<p>![[IMG_5593.jpg|300]]![[IMG_5594.jpg|300]]</p>
+<h3 id="twpa">TWPA の設定</h3>
+<ul>
+<li>CWを使って特定の周波数と強度のpump toneを入れてやる必要がある</li>
+<li>VNA を使って RF power を確認できるようにしておく<ul>
+<li>==Power は -40 dB 程度 (Lamb shift 後の値程度) に設定しておく==</li>
+</ul>
+</li>
+<li>TWPA 用の CW の USB を PC に繋ぐ</li>
+<li>ソフトを起動する<ul>
+<li>起動した瞬間に CW の output が始まるので、RF Enable ボタンを押して止める</li>
+<li>RF frequency と Power を調整し、RF Enable を押す</li>
+<li>VNA の出力を確認しながら、Gain が最も大きくなる値に Power と RF frequency を調整</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Labtop の電源のコンセントが刺さっているかを必ずチェックしておく
+測定中に Sleep mode に入ると TWPA が切れる</p>
+</div>
+<p>![[IMG_5597.jpg|300]]
+![[IMG_5598.jpg|300]]![[IMG_5603 1.jpg|300]]
+![[IMG_5600.jpg|300]]</p>
+<h2 id="_3">測定マニュアル</h2>
+<hr>
+<h3 id="thermal-excitation">Thermal Excitation の測定</h3>
+<ol>
+<li>VNA で Resonator の peak の確認 (Lamb-shift 前後の peak の位置を記録しておく)<ul>
+<li><code>qup_exp_qcodes/power_scan_M9804A.ipynb</code> で power scan も可能</li>
+</ul>
+</li>
+<li>Time domain 用の配線に変更する</li>
+<li><code>01. time_of_flight.ipynb</code> で time of flight から適切な ==acquisition_delays== を取得<ul>
+<li>正しく測定できているときは plot が山型になるので、最大となる時間を acquisition_delays として設定</li>
+</ul>
+</li>
+<li><code>02-b resonator_spectroscopy_2D.ipynb</code> で ==readout_pulse_amplitudes== を最適化</li>
+<li><code>02-a resonator_spectroscopy.ipynb</code> で設定した readout_pulse_amplitudes が最適かを確認<ul>
+<li>resonator の peak の位置を確認し、==readout_frequencies== を最適化</li>
+</ul>
+</li>
+<li><code>03. qubit_spectroscopy.ipynb</code> で Qubit の frequency を確認し、==xy_pulse_frequencies== を最適化</li>
+<li><code>05-c time_rabi.ipynb</code> で rabi oscillation を確認し、Fit 結果から周期の半分を ==xy_pulse_durations== として設定</li>
+<li><code>07. t1.ipynb</code> で T1 を測定</li>
+<li><code>08. ramsey.ipynb</code> で T2r を測定<ul>
+<li>detuning frequency からのずれを用いて、==xy_pulse_frequencies== をさらに最適化</li>
+</ul>
+</li>
+<li><code>02-d resonator_spectroscopy_dispersive_shift.ipynb</code> で Rx pulse あり/なしの場合の S21 を確認<ul>
+<li>e-state に対応する resonator peak の位置を確認し、==readout_frequencies== を変更</li>
+</ul>
+</li>
+<li><code>03. qubit_spectroscopy_f21.ipynb</code> で Qubit の frequency (f21) を確認し、==x12_pulse_frequencies== を最適化</li>
+<li><code>05-d time_rabi_f21.ipynb</code> で rabi oscillation を確認し、Fit 結果から周期の半分を ==x12_pulse_durations== を設定</li>
+<li><code>08-b. ramsey_f21.ipynb</code> で T2r を測定<ul>
+<li>detuning frequency からのずれを用いて、==x12_pulse_frequencies== をさらに最適化</li>
+</ul>
+</li>
+<li><code>02-e. resonator_spectroscopy_gef.ipynb</code> で f-state, e-state, g-state の dispersive shift を確認する</li>
+<li><code>05-e. time_rabi_thermal_excitation.ipynb</code> で熱励起を測定</li>
+</ol>
+<h2 id="shutdown">Shutdown</h2>
+<hr>
+<ul>
+<li>QCS はそのまま起動しておいても良い</li>
+<li>以下の電源を切っておく<ul>
+<li>HEMT の電源</li>
+<li>LNFの電源</li>
+<li>室温アンプの電源</li>
+<li>TWPA のソフト(PC から × ボタンで落とすだけ)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>昇温の際には、新田さんに連絡する</li>
+</ul>
+</li>
+</ul>
+<p>![[IMG_5601.jpg|300]]![[IMG_5604.jpg|300]]
+![[IMG_5602.jpg|300]]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
