@@ -120,6 +120,7 @@ $ conda install matplotlib
 
 #### qiskit-metal のインストール
 
+#### mac の場合
 ```
 $ git clone https://github.com/Qiskit/qiskit-metal.git
 $ cd qiskit-metal
@@ -129,6 +130,16 @@ $ conda env create -n qiskit-metal -f environment.yml
 $ conda activate qiskit-metal
 $ python -m pip install --no-deps -e .
 ```
+
+#### windows の場合
+
+1. github desktop をインストールし、https://github.com/Qiskit/qiskit-metal.git にあるリポジトリを clone する
+2. Anaconda をインストールすると、anaconda prompt を利用できるはずなので、1. でダウンロードした directory に移動し、以下のコマンドを入力する
+    1. ```conda env create -n <env_name> -f environment.yml```
+    2. ```conda activate <env_name>```
+    3. ```python -m pip install --no-deps -e .```
+3. あとは　VSCode の kernel として ```<env_name>``` を指定する
+
 
 #### gdsfactory のインストール
 
@@ -157,7 +168,7 @@ main_cell = library.top_level()[0]
 wf.add(gdstk.Reference(main_cell))
 ```
 
-### resonator の作り方
+### resonator などの長さの確認方法
 
 実際の path の長さは以下のように確認することができる。
 

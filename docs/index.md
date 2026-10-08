@@ -53,8 +53,21 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
 ```
 
 
+### Obsidian との互換性
+
+例えば Obsidian で callout を作成するときの command は MkDocs の記法と異なる。
+そのため、互換性を持たせるには mkdocs-obsidian-bridge を使用する。
+変更する点としては、ci.yml に以下を追加する。
+```yaml
+      - run: pip install mkdocs-obsidian-bridge
+```
+そして、mkdocs.yml に以下を追加
+```yaml
+markdown_extensions:
+	- obsidian_callouts
+```

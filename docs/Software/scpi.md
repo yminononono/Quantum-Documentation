@@ -47,6 +47,8 @@ GPIB を使って SCPI コマンドを送るためのアプリケーションと
 
 ```
 $ conda create -n pyvisa python=3.11
+$ conda activate pyvisa
+$ conda config --add channels conda-forge
 $ conda install pyvisa
 $ conda install PyVISA-py
 $ conda install zeroconf
@@ -93,7 +95,26 @@ $ pyvisa-info
    - 設定が終わったら　```STEP``` で元のメニューに戻る
 
 !!!warning
-    BCD パラレルインターフェイスになっていると動かないので、GPIB の　address 設定画面になっているか確認する
+    BCD パラレルインターフェイスになっていると動かないので、GPIB の address 設定画面になっているか確認する
 
 !!!info
     GPIB が正しく接続できている場合には、NI-VISA Interactive Control や　PyVisa などで ```GPIB::1::INTFC``` のように表示される。
+
+### 使用可能なコマンド
+
+- [説明書](https://3d-yd.com/jpdf2/6144.pdf)　の p.91 を参照
+
+| コマンド | 効果 |
+| ------ | --- |
+| I1 | 1mA レンジに変更 |
+| D0.0001 | 1mA レンジの場合、0.1μA に設定 |
+| E | operate mode に変更 (出力をオンに) |
+| H | standby mode に変更 (出力をオフに) |
+| K0 | 1mA レンジの場合、0.1μA 増加 (K4 で減少) |
+
+## QCoDeS
+
+> QcoDeS is a Python-based data acquisition framework developed by the Copenhagen / Delft / Sydney / Microsoft quantum computing consortium.
+
+- [Github](https://github.com/microsoft/Qcodes)
+- [Documentation](https://microsoft.github.io/Qcodes/index.html)

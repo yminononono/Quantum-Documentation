@@ -135,3 +135,15 @@ YouTube にも例があって分かりやすい。
 
 - [Resonator Eigen-Mode and Quality Factor Simulation using HFSS - Quantum Chip Design](https://www.youtube.com/watch?v=H71XHyAYDIY)
 - [Eigenmodes simulation of a cylindrical resonator with HFSS](https://indico.cern.ch/event/1214547/contributions/5109107/attachments/2595259/4479932/EigenmodesResonantCavityHFSS-JUAS23-NERONI.pdf)
+
+設定の仕方は Driven Modal とほとんど同じだが、Analysis で出てくる結果が異なる。  
+Analysis ではいくつ eigen mode を探したいかを指定し走らせると、指定した分だけ eigen mode を計算してくれる。  
+複数の resonator があるときに、どの resonator の共振周波数か知りたいときには、```Field Overlays``` で ```Mag_E``` をみると分かりやすい。  
+Analysis で見つけてきた共振周波数を切り替えるには、
+
+- ```HFSS``` -> ```Fields``` -> ```Edit Sources``` を選択する。([image](<Screenshot 2024-12-23 at 16.26.51.png>){ width="50%" })
+- 調べたい mode の stored energy を 1 Joules などに変更し、```適用``` を押す。([image](<Screenshot 2024-12-23 at 16.31.44.png>){ width="50%" })
+
+そうすると以下の図のように、選択した mode に対応する resonator に energy が貯まっていることがわかる。
+
+![alt text](<Screenshot 2024-12-23 at 16.48.25.png>){ width="50%" }

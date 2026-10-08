@@ -1,0 +1,313 @@
+{
+  "main": {
+    "id": "507a2308ad63a0f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ea93ddda2ac3f18",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "018c2074a6c138e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "reference.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "reference"
+            }
+          },
+          {
+            "id": "8caa68b3634e02ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software/QCS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "QCS"
+            }
+          },
+          {
+            "id": "cbbc335510bf9c94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software/Simulation/COMSOL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "COMSOL"
+            }
+          },
+          {
+            "id": "c781570d44272804",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software/Simulation/qiskit-metal.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "qiskit-metal"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ef4717fe22eefdf5",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b67f6b96ba5ecc9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "00235e3d62a9910a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "300f1d1a8035832b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "eba82c77e6d49acf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e9114a45de10ea14",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fbcf34e4b380102",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f62782a837e62cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "reference.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for reference"
+            }
+          },
+          {
+            "id": "f96120b2a9e16814",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Hardware/PPMS.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from PPMS"
+            }
+          },
+          {
+            "id": "81419d34bdee894e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c6e089c55bbb36f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Software/Simulation/COMSOL.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "1b092abf4bfddac9",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 462.4296875
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "floating": {
+    "id": "db72e23288f4c6d5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "936c74f74ebb3c55",
+        "type": "window",
+        "children": [
+          {
+            "id": "9f7e6e99e48a9a94",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "98cb74b7fe941ae0",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1280,
+        "y": 25,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "cbbc335510bf9c94",
+  "lastOpenFiles": [
+    "Virtual Environment.md",
+    "Software/QCS.md",
+    "Software/scpi.md",
+    "Hardware/Equipment.md",
+    "Hardware/Facilities.md",
+    "Hardware/Fabrication.md",
+    "Hardware/Material.md",
+    "Hardware/Measurement.md",
+    "Hardware/PPMS.md",
+    "Software/Simulation/qiskit-metal.md",
+    "Software/Simulation/HFSS.md",
+    "Software/Simulation/COMSOL.md",
+    "Screenshot 2026-09-10 at 14.38.28.png",
+    "Screenshot 2026-09-10 at 13.26.25.png",
+    "Screenshot 2026-09-10 at 13.00.27.png",
+    "Software/figs/Screenshot 2024-11-25 at 14.43.43.png",
+    "Software/figs/Screenshot 2024-11-25 at 17.46.53.png",
+    "Software/Simulation/index.md",
+    "Software/Simulation/PyAEDT.md",
+    "Software/Simulation/MPh.md",
+    "Software/QC/IQM.md",
+    "Software/QC/Qiskit.md",
+    "notes.md",
+    "a.md",
+    "IMG_5595.jpg",
+    "IMG_5603 1.jpg",
+    "IMG_5600.jpg",
+    "IMG_5599.jpg",
+    "IMG_5598.jpg",
+    "Software/Git.md",
+    "Software/imageprocessing.md",
+    "2026-06-26.md",
+    "Untitled 1.canvas",
+    "Untitled 3.base",
+    "Untitled 2.base",
+    "2026-05-29.md",
+    "Untitled.canvas",
+    "Untitled 1.base",
+    "Untitled.base",
+    "reference.md",
+    "Paperwork/Travel.md",
+    "Paperwork/Purchase.md",
+    "Software/QC",
+    "Software/Simulation",
+    "Software/figs",
+    "Paperwork/fig",
+    "Hardware/fig"
+  ]
+}
